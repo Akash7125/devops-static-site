@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My DevOps Website - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <img src="assets/logo.png" alt="Site Logo" class="logo" />
+    <h1>My DevOps Website 🚀</h1>
+    <nav>
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="hero">
+      <h2>Hello! 👋</h2>
+      <p>Welcome to my simple static website built for a DevOps project. This site contains multiple HTML pages and a shared CSS file.</p>
+      <p>Try clicking About or Contact at the top.</p>
+      <a class="btn" href="about.html">Learn more</a>
+    </section>
+
+    <section class="features">
+      <div class="card">
+        <h3>Version Control</h3>
+        <p>We will store this code on GitHub.</p>
+      </div>
+      <div class="card">
+        <h3>CI/CD</h3>
+        <p>Jenkins will automatically build and deploy the site.</p>
+      </div>
+      <div class="card">
+        <h3>Containerized</h3>
+        <p>We will serve this site from a Docker container.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> My DevOps Website</p>
+  </footer>
+
+  <script>
+    // small script to set current year and simple nav highlight
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // no other JS needed for static site
+  </script>
+</body>
+</html>

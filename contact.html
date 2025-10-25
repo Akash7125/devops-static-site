@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - My DevOps Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <img src="assets/logo.png" alt="Site Logo" class="logo" />
+    <h1>Contact</h1>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section>
+      <h2>Get in touch</h2>
+      <p>This demo site does not send messages. This contact form is just for show in our frontend demo.</p>
+
+      <form class="contact-form" action="#" method="post" onsubmit="alert('This is a demo — form not submitted.'); return false;">
+        <label>
+          Name<br />
+          <input type="text" name="name" placeholder="Your name" required />
+        </label>
+        <label>
+          Email<br />
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          Message<br />
+          <textarea name="message" rows="4" placeholder="Say hello..."></textarea>
+        </label>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="index.html">◀ Back to Home</a></p>
+  </footer>
+</body>
+</html>
