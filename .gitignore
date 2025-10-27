@@ -1,0 +1,4 @@
+# no node deps here, but keep good practice
+.DS_Store
+.vscode/
+*.log

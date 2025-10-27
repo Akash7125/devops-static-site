@@ -1,11 +1,13 @@
-# Step 1: Use a lightweight web server image
-FROM nginx:alpine
+# Use nginx stable alpine image
+FROM nginx:stable-alpine
 
-# Step 2: Copy website files into the nginx html directory
+# Remove default nginx html and copy our site
+RUN rm -rf /usr/share/nginx/html/*
 COPY . /usr/share/nginx/html
 
-# Step 3: Expose port 80 (web traffic)
+# Expose port 80
 EXPOSE 80
 
-# Step 4: Start nginx automatically
-CMD ["nginx", "-g", "daemon off;"]
+# Start nginx (default command in base image is fine)
+# Healthcheck (optional) - checks index.html is served
+HEALTHCHECK --interval=30s --timeout=5s --start-period=5s CMD wget -q --spider http://localhost/ || exit 1

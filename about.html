@@ -1,41 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About - My DevOps Website</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>About - DevOps Static Demo</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
   <header class="site-header">
-    <img src="assets/logo.png" alt="Site Logo" class="logo" />
-    <h1>About This Project</h1>
-    <nav>
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link active">About</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
+    <div class="container">
+      <h1>DevOps Static Demo</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="content">
-    <section>
-      <h2>What is this?</h2>
-      <p>This is a simple static website made of multiple HTML files and one CSS file. We'll use it to demonstrate GitHub, Jenkins, Docker, Kubernetes, and Terraform.</p>
-
-      <h3>Files included</h3>
-      <ul>
-        <li><strong>index.html</strong> — home page</li>
-        <li><strong>about.html</strong> — project info</li>
-        <li><strong>contact.html</strong> — contact page (form is non-functional, just for demo)</li>
-        <li><strong>styles.css</strong> — styling for all pages</li>
-      </ul>
-
-      <p>Next we will push this to GitHub (version control) and then automate build and deployment.</p>
-    </section>
+  <main class="container">
+    <h2>About</h2>
+    <p>This minimal static site is designed to keep the application simple while letting us exercise the full DevOps toolchain:</p>
+    <ul>
+      <li>Git / GitHub</li>
+      <li>GitHub Actions</li>
+      <li>Docker (nginx image)</li>
+      <li>Azure Container Registry (ACR)</li>
+      <li>AKS (Azure Kubernetes Service)</li>
+      <li>Terraform & Ansible for automation</li>
+    </ul>
   </main>
 
   <footer class="site-footer">
-    <p><a href="index.html">◀ Back to Home</a></p>
+    <div class="container">
+      <small>© <span id="year"></span> DevOps Static Demo</small>
+    </div>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
