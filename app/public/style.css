@@ -1,85 +1,55 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  background: url("bg.jpg") no-repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
+  background: url('bg.jpg') no-repeat center center/cover;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .glass-card {
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(15px);
   border-radius: 20px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  color: #fff;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 40px 30px;
   width: 350px;
 }
 
-h1 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.search {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.search input {
+input {
   padding: 10px;
-  border-radius: 8px 0 0 8px;
   border: none;
-  width: 70%;
+  border-radius: 5px;
   outline: none;
-  font-size: 1rem;
+  margin-right: 8px;
+  width: 70%;
 }
 
-.search button {
+button {
   padding: 10px 15px;
   border: none;
-  background-color: rgba(255, 255, 255, 0.3);
+  background: #0078ff;
   color: white;
+  border-radius: 5px;
   cursor: pointer;
-  border-radius: 0 8px 8px 0;
-  font-weight: bold;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
-.search button:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+button:hover {
+  background: #005fcc;
 }
 
-.result p {
-  font-size: 1.1rem;
-  margin: 10px 0;
-}
-
-.result h2 {
-  font-size: 1.4rem;
-  margin: 15px 0 5px;
-}
-
-.result .temp {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.result .details {
-  margin-top: 10px;
+#result {
+  margin-top: 20px;
   font-size: 1rem;
+  line-height: 1.6;
 }
