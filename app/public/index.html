@@ -8,34 +8,17 @@
 </head>
 <body>
   <div class="container">
-    <div class="search-box">
-      <input id="city" type="text" placeholder="Search City" />
-      <button onclick="getWeather()">
-        <img src="search-city.png" alt="Search" />
-      </button>
-    </div>
+    <div class="glass-card">
+      <h1>🌤️ Weather Dashboard</h1>
 
-    <div class="weather-card">
-      <h2 id="city-name"></h2>
-      <p id="date"></p>
-      <div class="main-info">
-        <img id="weather-icon" src="not-found.png" alt="Weather icon" />
-        <div class="temp">
-          <h1 id="temperature">°C</h1>
-          <p id="condition"></p>
-        </div>
+      <div class="search">
+        <input type="text" id="city" placeholder="Enter city name" />
+        <button onclick="getWeather()">Get Weather</button>
       </div>
-      <div class="details">
-        <div class="detail-item">
-          <img src="humidity.svg" alt="Humidity" />
-          <p>Humidity: <span id="humidity">%</span></p>
-        </div>
-        <div class="detail-item">
-          <img src="wind.svg" alt="Wind" />
-          <p>Wind: <span id="wind">m/s</span></p>
-        </div>
+
+      <div id="result" class="result">
+        <p>Enter a city to view weather details</p>
       </div>
-      <p id="error-msg"></p>
     </div>
   </div>
 

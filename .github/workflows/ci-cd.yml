@@ -45,4 +45,4 @@ jobs:
       - name: Deploy to AKS
         run: |
           kubectl create deployment devops-static-site --image=${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} --dry-run=client -o yaml | kubectl apply -f -
-          kubectl expose deployment devops-static-site --type=LoadBalancer --port=80 --target-port=80 --dry-run=client -o yaml | kubectl apply -f -
+          kubectl expose deployment devops-static-site --type=LoadBalancer --port=80 --target-port=8080 --dry-run=client -o yaml | kubectl apply -f -
