@@ -19,7 +19,7 @@ async function getWeather() {
     resultDiv.innerHTML = `
       <h2>${data.city}, ${data.country}</h2>
       <p>🌡️ Temperature: ${data.temperature}°C (Feels like ${data.feels_like}°C)</p>
-      <p>🌤️ Condition: ${data.condition} - ${data.description}</p>
+      <p>🌤️ Condition: ${data.description}</p>
       <p>💧 Humidity: ${data.humidity}%</p>
       <p>🌬️ Wind Speed: ${data.wind_speed} m/s</p>
       <p>🌡️ Min: ${data.temp_min}°C | Max: ${data.temp_max}°C</p>
